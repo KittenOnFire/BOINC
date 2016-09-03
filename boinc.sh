@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 echo "Script d'auto-installation de BOINC sur votre ordinateur."
 
