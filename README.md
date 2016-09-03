@@ -1,2 +1,2 @@
 # BOINC
-BOINC_SBC
+Script à destination de l'AF.
