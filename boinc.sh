@@ -1,6 +1,7 @@
 #!/bin/sh
 # Fichier d'installation/Configuration de BOINC
 echo "Script d'auto-installation de BOINC sur votre ordinateur."
+
 sudo fs_resize && echo " Partition étendue sur l'ensemble de la carte (µ)SD" # Etendre la partition sur la carte SD entière
 
 sudo apt-get update && apt-get upgrade && echo "Update et upgrade u système effectuées# Update et upgrade de l'OS
