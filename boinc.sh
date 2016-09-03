@@ -1,7 +1,7 @@
 #!/bin/sh
 # Fichier d'installation/Configuration de BOINC
 echo "Script d'auto-installation de BOINC sur votre ordinateur."
-sudo apt-get update && apt-get upgrade && echo "Update et upgrade u système effectuées# Update et upgrade de l'OS
+sudo apt-get update && apt-get upgrade && echo "Update et upgrade du système effectuées" # Update et upgrade de l'OS
 
 sudo apt-get install boinc-client && echo "BOINC installé" # Installation du client BOINC
 
