@@ -6,16 +6,16 @@ sudo apt-get update && apt-get upgrade && echo "Update et upgrade u système eff
 sudo apt-get install boinc-client && echo "BOINC installé" # Installation du client BOINC
 
 echo "Joindre un compte pour BOINC"
-	echo "Quel est votre mot de passe pour le client BOINC sur cet ordinateur ?"
-	read pass_client
-	sudo $pass_client > /var/lib/boinc-client/gui_rpc_auth.cfg && echo "Password GUI inscrit dans le fichier gui_prc_auth.cfg" # Inscrire le password GUI dans le fichier idoine
-	echo "Quelle est l'adresse du manager ? (exemple : https://am.statseb.fr/ ou https://bam.boincstats.com/"
-	read manager
-	echo "Quelle l'adresse mail utilisée avec ce manager ?"
-	read mail
-	echo "Quel est votre mot de passe sur ce manager ?"
-	read pass_manager
-	sudo boinccmd --host localhost --passwd $pass_client --join_acct_mgr $manager $mail $pass_manager&& echo "Vous avez maintenant rejoint le manager $manager"
+echo "Quel est votre mot de passe pour le client BOINC sur cet ordinateur ?"
+read pass_client
+sudo $pass_client > /var/lib/boinc-client/gui_rpc_auth.cfg && echo "Password GUI inscrit dans le fichier gui_prc_auth.cfg" # Inscrire le password GUI dans le fichier idoine
+echo "Quelle est l'adresse du manager ? (exemple : https://am.statseb.fr/ ou https://bam.boincstats.com/"
+read manager
+echo "Quelle l'adresse mail utilisée avec ce manager ?"
+read mail
+echo "Quel est votre mot de passe sur ce manager ?"
+read pass_manager
+sudo boinccmd --host localhost --passwd $pass_client --join_acct_mgr $manager $mail $pass_manager&& echo "Vous avez maintenant rejoint le manager $manager"
 
 sudo boinccmd --set_run_mode always && echo "BOINC tourne en permanence" # Utiliser BOINC en permanence
 
