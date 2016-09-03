@@ -2,4 +2,4 @@
 Script à destination de l'AF.
 
 
-Just a small script tro auto install and configure BOINC client.
+Just a small script to auto install and configure BOINC client.
