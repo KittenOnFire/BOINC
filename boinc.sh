@@ -23,6 +23,6 @@ sudo boinccmd --set_network_mode always && echo "BOINC est toujours connecté à
 
 echo "Adresse ip de l'ordinateur hôte (ayant accès à celui-ci). Exemple : 192.168.1.10"
 read ip_master
-$ip_master > /etc/boinc-client/remote_hosts.cfg && echo "IP de l'ordinateur hôte inscrite dans le fichier remote_hosts.cfg" # Inscrire l'IP de l'ordi hôte
+sudo echo $ip_master > /etc/boinc-client/remote_hosts.cfg && echo "IP de l'ordinateur hôte inscrite dans le fichier remote_hosts.cfg" # Inscrire l'IP de l'ordi hôte
 
 sudo /etc/init.d/boinc-client restart && echo "Client BOINC redémarré. Bon crunch !"
