@@ -27,4 +27,13 @@ echo "Adresse ip de l'ordinateur hôte (ayant accès à celui-ci). Exemple : 192
 read ip_master
 sudo echo $ip_master > /etc/boinc-client/remote_hosts.cfg && echo "==> IP de l'ordinateur hôte inscrite dans le fichier remote_hosts.cfg" # Inscrire l'IP de l'ordi hôte
 
+echo "==> Donnez un nom à cette machine"
+read nom
+sudo echo $nom > /etc/hostname
+sudo echo 127.0.0.1 localhost > /etc/hosts
+sudo echo 127.0.1.1 $nom >> /etc/hosts
+echo "==> Votre ordinateur s'appelle maintenant $nom"
+
 sudo /etc/init.d/boinc-client restart && echo "==> Client BOINC redémarré. Bon crunch !"
+
+sudo reboot
