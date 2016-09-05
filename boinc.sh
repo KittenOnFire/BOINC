@@ -21,7 +21,7 @@ sudo /etc/init.d/boinc-client restart
 
 sudo boinccmd --set_run_mode always && echo "==> BOINC tourne maintenant en permanence" # Utiliser BOINC en permanence
 
-sudo boinccmd --set_network_mode always && echo "==> BOINC à maintenant toujours accès à Internet" # Toujours être relié au réseau
+sudo boinccmd --set_network_mode always && echo "==> BOINC a maintenant toujours accès à Internet" # Toujours être relié au réseau
 
 echo "Adresse ip de l'ordinateur hôte (ayant accès à celui-ci). Exemple : 192.168.1.10"
 read ip_master
