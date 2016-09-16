@@ -36,4 +36,4 @@ echo "==> Votre ordinateur s'appelle maintenant $nom"
 
 sudo /etc/init.d/boinc-client restart && echo "==> Client BOINC redémarré. Bon crunch !"
 
-sudo reboot
+sudo /etc/init.d/boinc-client restart
