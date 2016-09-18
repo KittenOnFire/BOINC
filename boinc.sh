@@ -1,7 +1,7 @@
 #!/bin/sh
 # Fichier d'installation/Configuration de BOINC
 echo "Script d'auto-installation de BOINC sur votre ordinateur."
-sudo apt-get update && apt-get upgrade && echo "==> Update et upgrade du système effectuées" # Update et upgrade de l'OS
+sudo apt-get update && echo "==> Update du système effectuée" # Update et upgrade de l'OS
 
 sudo apt-get install boinc-client && echo "BOINC installé" # Installation du client BOINC
 
@@ -35,5 +35,3 @@ sudo echo 127.0.1.1 $nom >> /etc/hosts
 echo "==> Votre ordinateur s'appelle maintenant $nom"
 
 sudo /etc/init.d/boinc-client restart && echo "==> Client BOINC redémarré. Bon crunch !"
-
-sudo /etc/init.d/boinc-client restart
