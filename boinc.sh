@@ -3,7 +3,7 @@
 echo "Script d'auto-installation de BOINC sur votre ordinateur."
 sudo apt-get update && echo "==> Update du système effectuée" # Update et upgrade de l'OS
 
-sudo apt-get install boinc-client && echo "BOINC installé" # Installation du client BOINC
+sudo apt-get install boinc-client && echo "==>BOINC installé" # Installation du client BOINC
 
 echo "Joindre un compte pour BOINC"
 echo "Quel est votre mot de passe pour le client BOINC sur cet ordinateur ?"
@@ -15,7 +15,8 @@ echo "Quelle est l'adresse mail utilisée avec ce manager ?"
 read mail
 echo "Quel est votre mot de passe sur ce manager ?"
 read pass_manager
-sudo boinccmd --host localhost --passwd $pass_client --join_acct_mgr $manager $mail $pass_manager && echo "==> Vous avez maintenant rejoint le manager $manager"
+sudo boinccmd --host localhost --passwd $pass_client --join_acct_mgr $manager $mail $pass_manager
+echo "==> Vous avez maintenant rejoint le manager $manager"
 
 sudo /etc/init.d/boinc-client restart
 
