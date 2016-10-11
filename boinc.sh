@@ -6,6 +6,7 @@ sudo apt-get update && echo "==> Update du système effectuée" # Update et upgr
 sudo apt-get install boinc-client && echo "==>BOINC installé" # Installation du client BOINC
 
 echo "Joindre un compte pour BOINC"
+cd /var/lib/boinc-client
 echo "Quel est votre mot de passe pour le client BOINC sur cet ordinateur ?"
 read pass_client
 sudo echo $pass_client > /var/lib/boinc-client/gui_rpc_auth.cfg && echo "==> Password GUI inscrit dans le fichier gui_rpc_auth.cfg" # Inscrire le password GUI dans le fichier idoine
