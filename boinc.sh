@@ -15,7 +15,8 @@ echo "Quelle est l'adresse mail utilisée avec ce manager ?"
 read mail
 echo "Quel est votre mot de passe sur ce manager ?"
 read pass_manager
-sudo boinccmd --host localhost --passwd $pass_client --join_acct_mgr $manager $mail $pass_manager && echo "==> Vous avez maintenant rejoint le manager $manager"
+cd /var/lib/boinc-client
+sudo boinccmd --join_acct_mgr $manager $mail $pass_manager && echo "==> Vous avez maintenant rejoint le manager $manager"
 
 sudo /etc/init.d/boinc-client restart
 
