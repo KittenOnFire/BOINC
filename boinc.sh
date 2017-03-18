@@ -6,7 +6,7 @@ sudo apt-get update && echo "Update du système effectuée" # Update et upgrade 
 sudo apt-get install boinc-client && echo "BOINC installé" # Installation du client BOINC
 
 echo "Joindre un compte pour BOINC"
-echo -e "\t\e[1;33;40m Quel est votre mot de passe pour le client BOINC sur cet ordinateur ?\e[0m 1;33m"
+echo -e "\t\e[1;33;40m Quel est votre mot de passe pour le client BOINC sur cet ordinateur ? \e[0m 1;33m"
 read pass_client
 sudo echo $pass_client > /var/lib/boinc-client/gui_rpc_auth.cfg && echo -e "Password GUI inscrit dans le fichier gui_rpc_auth.cfg" # Inscrire le password GUI dans le fichier idoine
 echo -e "\t\e[1;33;40m Quelle est l'adresse du manager ? (exemple : http://am.statseb.fr/ ou http://bam.boincstats.com/) \e[0m 1;33m"
